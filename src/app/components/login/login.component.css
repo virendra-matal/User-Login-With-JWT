@@ -1,0 +1,15 @@
+.container{
+    background-color: #e2e2e2;
+    height: 100%;
+    text-align: center;
+}
+.card{
+    
+    margin: auto;
+    width: 50%;
+    position: relative;
+    top: 150px;
+}
+.input{
+    width: 60%;
+}

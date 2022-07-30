@@ -1,0 +1,21 @@
+<div class="container">
+    <p>
+        <mat-toolbar color="primary">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span><a routerLink="" mat-icon-button style="font-size: 25px;">UserLogin App </a></span>
+          <span class="example-spacer"></span>
+          <a *ngIf="!islogged" mat-icon-button routerLink="/login" color="" class="anchour">Login</a>
+          <a *ngIf="islogged" mat-icon-button class="anchour" >User</a>
+          <a *ngIf="islogged" (click)="loggedOut()" mat-icon-button  class="anchour">Logout</a>
+
+          <button class="nav-item"  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button class="nav-item" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+        </mat-toolbar>
+      </p>
+</div>

@@ -1,0 +1,12 @@
+.example-spacer{
+
+    flex: 1 1 auto;
+
+}
+
+.anchour{
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 15px;
+}

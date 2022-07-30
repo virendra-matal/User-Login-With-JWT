@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-card class="card">
+        <h1>Login</h1>
+       
+
+        <form (ngSubmit)="sendData()">
+          <h1 *ngIf="Errorboolean">{{Error}}</h1>
+        <p>
+            <mat-form-field appearance="outline" class="input">
+              <mat-label>Username</mat-label>
+              <input matInput name="username" required [(ngModel)]="auth.username">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <!-- <mat-hint>Virendrab Matal</mat-hint> -->
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" class="input">
+                <mat-label>Enter your password</mat-label>
+                <input matInput name="password" [type]="hide ? 'password' : 'text'"  [(ngModel)]="auth.password" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+          </p>
+
+          <button type="submit" mat-raised-button color="accent">Submit</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="reset" mat-raised-button color="accent">Reset</button>
+          
+
+        </form>
+          {{auth | json}}
+    </mat-card>
+</div>
